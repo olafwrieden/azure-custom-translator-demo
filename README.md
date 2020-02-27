@@ -18,6 +18,6 @@ Upon completion of this project, parties interested in experimenting with the de
 2. Deploy, connect, and interact with this demo application.
 3. *Stretch Goal:* Click-to-Deploy directly into Azure via Azure Resource Manager (auto provisioning).
 
-## Inital Architectural Design Thoughts
+## Initital Architectural Design Thoughts
 
 Assuming the model is trained, a user uploads a text file to the application which uploads it to Blob Storage (may help with processing of parallel data), an Event Grid trigger calls an Azure Function to pipe the texts through Custom Translator, upon completion, an HTTP trigger on an Azure Function saves the translated output (could include confidence score) into Blob Storage and returns the data on screen or by file download to the user.
