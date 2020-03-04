@@ -21,3 +21,7 @@ Upon completion of this project, parties interested in experimenting with the de
 ## Initial Architectural Design Thoughts
 
 Assuming the model is trained, a user uploads a text file to the application which uploads it to Blob Storage (may help with processing of parallel data), an Event Grid trigger calls an Azure Function to pipe the texts through Custom Translator, upon completion, an HTTP trigger on an Azure Function saves the translated output (could include confidence score) into Blob Storage and returns the data on screen or by file download to the user.
+
+### Early Learnings
+
+We need a minimum of 10,000 training sentence pairs to create a model.
